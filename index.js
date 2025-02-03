@@ -1,23 +1,24 @@
 import express from "express";
 import mongoose from "mongoose";
+import { fileURLToPath } from "url"
+import path from "path";
 import 'dotenv/config';
 import Comment from "./model/comment.js"
 const app = express()
-
-const hostname = '127.0.0.1';
-const port = 3000;
-
+const __filename = fileURLToPath(import.meta.url);
+const _dirname = path.dirname(_filename);
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
 .then(() => console.log('Connected to MongoDB'))
 .catch((err) => console.error('MongoDB connection error:', err));
-
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-app.set("view engine","ejs")
-app.set("views", "views")
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static('public'));
 
 app.get("/",(req,res)=>{
