@@ -41,40 +41,6 @@ app.post("/api/comments",(req,res)=>{
     }
 })
 
-
-// app.get("/api/products",(req,res)=>{
-//     Product.find().then(result=>{
-//         res.send(result)
-//     })
-// })
-
-// app.put("/api/products",(req,res)=>{
-//     const data = req.body
-//     Product.findByIdAndUpdate('679ccca031aabe5f8a0dd63f',data).then(result=>{
-//         Product.find().then(result=>{
-//             res.send(result)
-//         })
-//     })
-// })
-// app.delete("/api/products",(req,res)=>{
-//     Product.findByIdAndDelete('679cccc831aabe5f8a0dd641').then(result=>{
-//         Product.find().then(result=>{
-//             res.send(result)
-//         })
-//     })
-// })
-// Product.updateOne({ name: 'Old Name' }, { $set: { price: 50 } })
-// Product.updateMany({ name: 'Old Name' }, { $set: { price: 50 } })
-// Product.deleteOne({ name: 'Product to Delete' })
-
-
-
-
-
-
-
-
-
 app.listen(port,()=>{
     console.log(`Server running at http://${hostname}:${port}`);
 })
