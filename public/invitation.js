@@ -60,7 +60,7 @@ $(document).ready(function () {
     let allItems = [];
     function getComment() {
         axios.get('/api/comments').then(result => {
-            allItems = result.data.user
+            allItems = sortTimestamps(result.data.user)
             displayItems(currentPage, allItems);
             updatePagination(currentPage);
         })
@@ -74,17 +74,16 @@ $(document).ready(function () {
         });
     }
 
-    function displayItems(page, data) {
-        let allItems = sortTimestamps(data)
-        const startIndex = (page - 1) * itemsPerPage;
-        const endIndex = Math.min(startIndex + itemsPerPage, allItems.length);
-        const itemsToDisplay = allItems.slice(startIndex, endIndex);
-
+    function displayItems(page) {
         $contentDiv.empty();
         if (allItems.length === 0) {
             $contentDiv.html("<p class='text-center'>No wishes yet.</p>");
             return;
         }
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = Math.min(startIndex + itemsPerPage, allItems.length);
+        const itemsToDisplay = allItems.slice(startIndex, endIndex);
+
 
         itemsToDisplay.forEach(el => {
             let created = new Date(el.createdAt).getTime();
@@ -129,13 +128,13 @@ $(document).ready(function () {
         $nextPageLink.toggleClass('disabled', page * itemsPerPage >= allItems.length);
     }
 
-    $pagination.on('click', '.page-link', function (event) {
+    $pagination.on('click','.page-link', function (event) {
         event.preventDefault();
         const $clickedLink = $(this);
-
+        
         let newPage = parseInt($clickedLink.text());
-        if ($clickedLink.parent().attr('id') === 'prev-page') newPage = currentPage - 1;
-        if ($clickedLink.parent().attr('id') === 'next-page') newPage = currentPage + 1;
+        if ($clickedLink.parent().attr('id') === 'prev-page') {newPage = currentPage - 1};
+        if ($clickedLink.parent().attr('id') === 'next-page') {newPage = currentPage + 1};
 
         if (newPage >= 1 && newPage * itemsPerPage <= allItems.length + itemsPerPage) {
             currentPage = newPage;
