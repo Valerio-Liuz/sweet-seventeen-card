@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Montserrat", serif;
+    width: 600px;
+    margin: 0 auto;
+    background-image: url('./assets/3494734.jpg');
+}
+
+section{
+    max-height: fit-content;
+    height: 100vh;
+}
+
+section.main{
+    background-color: white;
+}
+
+div.container-dear-card{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+section#dear-card{
+    min-height: 504px;
+    width: 600px;
+    background-image: url('./assets/dear-card.png');
+}
+
+section.dear-center{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+section#dear-card div.center{
+    margin-top: 20%;
+    width: 50%;
+    padding: 10px;
+}
+
+section#dear-card div.center p{
+    font-family: "Montserrat", serif;
+    color: gold;
+    margin: auto;
+    font-size: 1.5em;
+    opacity: 90%;
+    text-shadow: 
+    0 0 5px rgba(255, 255, 0, 0.5),
+    0 0 10px rgba(255, 255, 0, 0.3),
+    0 0 20px rgba(255, 255, 0, 0.2),
+    0 0 30px rgba(255, 255, 0, 0.1);
+}
+
+section#dear-card div.center a{
+    text-decoration: none;
+    font-family: "Montserrat", serif;
+    color: gold;
+    text-decoration: underline;
+    font-size: 1em;
+    padding: 0 10px;
+    border-radius: 20px;
+    opacity: 90%;
+    text-shadow: 
+    0 0 5px rgba(255, 255, 0, 0.5),
+    0 0 10px rgba(255, 255, 0, 0.3),
+    0 0 20px rgba(255, 255, 0, 0.2),
+    0 0 30px rgba(255, 255, 0, 0.1);
+}
+
+section#dear-card div.center p#guest-name{
+    font-weight: bold;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+.none{
+    display: none;
+}
+
+nav#nav-number{
+    padding-right: 35px;
+}
+
+@media (max-width:425px){
+    section#dear-card{
+        margin-top: 300px;
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vevila Sweet Seventeen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <div class="container-dear-card animate__animated animate__tada">
+    <section class="text-center text-black d-flex align-items-start justify-content-center" id="dear-card">
+      <div class="center animate__animated animate__bounceInUp animate__delay-1s">
+        <p class="mb-4">THE MELODY OF THE WORLD</p>
+        <p>Dear,</p>
+        <p id="guest-name">Guest</p>
+        <a href="#invite-card" onclick="tes()">Open</a>
+      </div>
+    </section>
+  </div>
+
+  <section class="text-center text-black d-flex align-items-start justify-content-center main h-100">
+    <img id="invite-card" class="w-100 main" src="/assets/Give You Glory (600 x 774 piksel).png" alt="">
+  </section>
+
+  <section class="details main pt-3" id="details">
+    <div class="container">
+      <h2 class="text-center mb-4">Location</h2>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.9301911142234!2d98.67050137500891!3d3.6034595963706617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3036cd90a7b779bd%3A0x72242c56c0ede938!2sGrand%20Liberty%20Restaurant!5e0!3m2!1sen!2sid!4v1737971593099!5m2!1sen!2sid"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light py-3 main">
+    <div class="container border-2 border-top">
+      <h2 class="text-center mb-4">Count Down</h2>
+      <div class="d-flex justify-content-center gap-3">
+        <span id="day" class="border bg-dark text-white rounded p-4 container-sm text-center"></span>
+        <p class="mt-4  fs-5 fs-bold">:</p>
+        <span id="hour" class="border bg-dark text-white rounded p-4 container-sm text-center"></span>
+        <p class="mt-4  fs-5 fs-bold">:</p>
+        <span id="minute" class="border bg-dark text-white rounded p-4 container-sm text-center"></span>
+        <p class="mt-4  fs-5 fs-bold">:</p>
+        <span id="second"
+          class="border bg-dark text-white rounded p-4 container-sm text-center animate__animated animate__flipInX animate__infinite animate__duration-1s animate__delay-0.4s"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light h-auto border-top border-dark border-3 py-3 main">
+    <div class="container d-flex flex-column">
+      <h1 class="text-center">Wish For Vevila</h1>
+      <form class="container d-flex flex-column" id="submit-msg">
+        <label for="name">Name</label>
+        <input type="text" required placeholder="Name" id="name">
+        <label for="msg">Message</label>
+        <textarea name="msg" required id="msg" placeholder="Message"></textarea>
+        <button type="submit" class="mt-2 bg-dark text-white">Submit</button>
+      </form>
+    </div>
+
+    <div class="mt-4">
+      <h2 class="text-center border-top border-2 border-dark pt-3 mx-3">Wishes</h2>
+      <div class="d-flex flex-column container" id="msg-list">
+      </div>
+    </div>
+
+    <div class="container">
+      <nav aria-label="Page navigation" id="nav-number" class="mt-3">
+        <ul class="pagination d-flex flex-row align-items-center justify-content-center gap-3">
+          <li class="page-item" id="prev-page"><a class="page-link border-2 border-dark container" href="#">Prev</a>
+          </li>
+          <li id="page-number">1</li>
+          <li class="page-item" id="next-page"><a class="page-link border-2 border-dark container" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <footer class="text-center py-3 bg-dark text-white main">
+    <p>&copy; 2025. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <script src="/invitation.js"></script>
+</body>
+
+</html>
