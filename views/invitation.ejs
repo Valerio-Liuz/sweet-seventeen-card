@@ -14,9 +14,9 @@
 </head>
 
 <body>
-  <div class="container-dear-card animate__animated animate__tada">
-    <section class="text-center text-black d-flex align-items-start justify-content-center" id="dear-card">
-      <div class="center animate__animated animate__bounceInUp animate__delay-1s">
+  <div class="h-100 w-100 d-flex justify-content-center align-items-center" id="dear-container">
+    <section class="text-center d-flex align-items-center justify-content-center" id="dear-card">
+      <div class="center d-flex flex-column align-items-center justify-content-center animate__animated animate__bounceInUp animate__delay-1s">
         <p class="mb-4">THE MELODY OF THE WORLD</p>
         <p>Dear,</p>
         <p id="guest-name">Guest</p>
@@ -25,7 +25,7 @@
     </section>
   </div>
 
-  <section class="text-center text-black d-flex align-items-start justify-content-center main h-100">
+  <section class="text-center text-black d-flex align-items-start justify-content-center main h-auto">
     <img id="invite-card" class="w-100 main" src="/assets/Give You Glory (600 x 774 piksel).png" alt="">
   </section>
 
@@ -44,15 +44,15 @@
   <section class="bg-light py-3 main">
     <div class="container border-2 border-top">
       <h2 class="text-center mb-4">Count Down</h2>
-      <div class="d-flex justify-content-center gap-3">
-        <span id="day" class="border bg-dark text-white rounded p-4 container-sm text-center"></span>
+      <div class="d-flex justify-content-center align-items-center gap-1">
+        <span id="day" class="border bg-dark text-white rounded p-2 py-3 container-sm text-center"></span>
         <p class="mt-4  fs-5 fs-bold">:</p>
-        <span id="hour" class="border bg-dark text-white rounded p-4 container-sm text-center"></span>
+        <span id="hour" class="border bg-dark text-white rounded p-2 py-3 container-sm text-center"></span>
         <p class="mt-4  fs-5 fs-bold">:</p>
-        <span id="minute" class="border bg-dark text-white rounded p-4 container-sm text-center"></span>
+        <span id="minute" class="border bg-dark text-white rounded p-2 py-3 container-sm text-center"></span>
         <p class="mt-4  fs-5 fs-bold">:</p>
         <span id="second"
-          class="border bg-dark text-white rounded p-4 container-sm text-center animate__animated animate__flipInX animate__infinite animate__duration-1s animate__delay-0.4s"></span>
+          class="border bg-dark text-white rounded p-2 py-3 container-sm text-center animate__animated animate__flipInX animate__infinite animate__duration-1s animate__delay-0.4s"></span>
       </div>
     </div>
   </section>
