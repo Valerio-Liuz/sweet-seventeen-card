@@ -21,7 +21,7 @@ function tes() {
     });
     setTimeout(() => {
         card.classList.remove('dear-center')
-        card.parentElement.classList.remove('container-dear-card')
+        card.parentElement.classList.remove('d-flex')
         card.parentElement.classList.add('none')
     }, 1000);
 
