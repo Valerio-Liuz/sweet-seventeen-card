@@ -6,7 +6,7 @@ import 'dotenv/config';
 import Comment from "./model/comment.js"
 const app = express()
 const __filename = fileURLToPath(import.meta.url);
-const _dirname = path.dirname(_filename);
+const __dirname = path.dirname(__filename);
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -17,8 +17,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 app.set("view engine", "ejs");
-app.set('views', __dirname + '/views')
-app.use(express.static('public'));
+app.set('views', path.join(__dirname, '/views'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/",(req,res)=>{
     res.render("invitation")
