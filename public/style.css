@@ -72,6 +72,7 @@ section.main {
 div#dear-container{
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-image: url("./assets/dear-card.png");
 }
 
