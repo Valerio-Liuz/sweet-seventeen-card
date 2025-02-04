@@ -32,8 +32,13 @@ body {
 .loader {
     width: fit-content;
     font-weight: bold;
-    font-family: sans-serif;
-    color: white;
+    color: gold;
+    opacity: 90%;
+    text-shadow:
+        0 0 5px rgba(255, 255, 0, 0.5),
+        0 0 10px rgba(255, 255, 0, 0.3),
+        0 0 20px rgba(255, 255, 0, 0.2),
+        0 0 30px rgba(255, 255, 0, 0.1);
     font-size: 30px;
     padding-bottom: 8px;
     background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
@@ -43,7 +48,6 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 100;
-    color: white;
 }
 
 .loader:before {    
