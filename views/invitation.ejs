@@ -19,7 +19,7 @@
   </div>
   <div class="h-100 w-100 d-flex justify-content-center align-items-center" id="dear-container">
     <section class="text-center d-flex align-items-center justify-content-center" id="dear-card">
-      <div class="center d-flex flex-column align-items-center justify-content-center animate__animated animate__bounceInUp animate__delay-2.5s">
+      <div class="center d-flex flex-column align-items-center justify-content-center">
         <p class="mb-4">THE MELODY OF THE WORLD</p>
         <p>Dear,</p>
         <p id="guest-name">Guest</p>
@@ -102,6 +102,7 @@
   <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   <script>
     $(window).on('load', function () {
+      $('#dear-card').addClass("animate__animated animate__bounceInUp animate__delay-1s")
       $('#loading').hide();
     }) 
   </script>
