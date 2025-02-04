@@ -14,6 +14,9 @@
 </head>
 
 <body>
+  <div class="load-container" id="loading">
+    <div class="loader"></div>
+  </div>
   <div class="h-100 w-100 d-flex justify-content-center align-items-center" id="dear-container">
     <section class="text-center d-flex align-items-center justify-content-center" id="dear-card">
       <div class="center d-flex flex-column align-items-center justify-content-center animate__animated animate__bounceInUp animate__delay-1.5s">
@@ -97,6 +100,9 @@
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    $(window).on('load', function () {
+      $('#loading').hide();
+    }) 
   <script src="/invitation.js"></script>
 </body>
 
